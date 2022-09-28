@@ -5,3 +5,6 @@ Merle examples
 ```
 git clone https://github.com/merliot/examples.git
 ```
+
+## Raspberry Pi Examples
+* Temperature/Pressure using BMP180 sensor
