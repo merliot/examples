@@ -17,6 +17,13 @@ in demo mode on any system with Go installed.  (See Running below).
 
 ### Parts List:
 * Rapsberry Pi (any model except Pico)
-* Sixfab Raspberry Pi 4G/LTE Cellular Modem Kit.  I'm using the Telit LE910CF-NF
-(North America) LTE module option, $125 for the kit.  It includes a SIM card
-for $2/month + data
+* [Sixfab](https://sixfab.com) Raspberry Pi 4G/LTE Cellular Modem Kit.  I'm using the Telit LE910CF-NF
+(North America) LTE module option, $125 for the [kit](https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/).
+It includes a SIM card for $2/month + data.
+
+## Software Setup
+Files for this example are located in examples/gps/ and examples/telit.
+
+Thing Prime runs on a cloud VM.  I'm using a Linode VM to host Thing Prime.
+
+Sixfab core software is installed on Raspberry Pi and SIM is activated.
