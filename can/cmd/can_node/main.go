@@ -14,7 +14,6 @@ func main() {
 
 	thing.Cfg.Model = "can_node"
 	thing.Cfg.Name = "canny"
-	thing.Cfg.User = "merle"
 
 	thing.Cfg.PortPrivate = 6000
 

@@ -14,7 +14,6 @@ func main() {
 
 	thing.Cfg.Model = "gps"
 	thing.Cfg.Name = "gypsy"
-	thing.Cfg.User = "merle"
 
 	thing.Cfg.PortPublic = 80
 	thing.Cfg.PortPrivate = 6000
