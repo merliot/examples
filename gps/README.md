@@ -12,8 +12,8 @@ The location is checked and updated every minute.
 ![UI](gps_ui.png)
 
 ## Hardware Setup
-Parts list below.  If you don't have the hardware, there is a demo mode so you
-can run Thing in software-only mode.  (See Running below).
+Parts list below.  If you don't have the hardware, don't worrry, you can run
+in demo mode on any system with Go installed.  (See Running below).
 
 ### Parts List:
 * Rapsberry Pi (any model except Pico)
