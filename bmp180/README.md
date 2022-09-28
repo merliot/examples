@@ -38,6 +38,10 @@ sudo apt install -y i2c-tools
 ```
 sudo i2cdetect -y 1
 ```
+#### Installation
+```
+git clone https://github.com/merliot/examples.git
+```
 
 Files for this example are located in examples/bmp180:
 ```
