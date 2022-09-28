@@ -10,9 +10,11 @@ The User Interface uses gauge.js javascript library.
 ![UI](bmp180.png)
 
 ## Hardware Setup
+### Parts List
 * Raspberry Pi (all model except Pico)
 * BMP180  pressure/temperature/altitude sensor
 
+### Wire it up
 Wire the BMP180 to the Raspberry Pi:
 
 ```
@@ -24,7 +26,7 @@ SCL	SCL (pin 5)
 SDA	SDA (Pin 3)
 ```
 
-## Software Setup
+### Enable I2C
 * Use the raspi-config tool to enable  I2C interface on Raspberry Pi
 ```
 sudo raspi-config
@@ -38,6 +40,9 @@ sudo apt install -y i2c-tools
 ```
 sudo i2cdetect -y 1
 ```
+
+## Software Setup
+
 #### Installation
 ```
 git clone https://github.com/merliot/examples.git
@@ -56,13 +61,13 @@ examples/bmp180/
 └── README.md
 ```
 
-## Building
+### Building
 ```
 $ cd examples/bmp180
 $ ./build
 ```
 
-## Running
+### Running
 ```
 $ cd examples/bmp180
 $ ~/go/bin/bmp180
