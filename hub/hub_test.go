@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/merliot/merle"
-	"github.com/merliot/merle/examples/gps"
-	"github.com/merliot/merle/examples/relays"
+	"github.com/merliot/examples/gps"
+	"github.com/merliot/examples/relays"
 )
 
 func testHub(t *testing.T, hub *merle.Thing) {
