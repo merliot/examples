@@ -76,3 +76,7 @@ $ ~/go/bin/bmp180
 Open http://localhost on the Raspberry Pi to view the user interface.
 
 Or, open http://<ip address> from another system using the Rapsberry Pi's <IP address>.
+
+In this example, the Raspberry Pi address is 192.168.1.130:
+  
+![UI](bmp180.png)
