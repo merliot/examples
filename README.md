@@ -3,5 +3,5 @@ Merle examples
 
 ## Installation
 ```
-git clone https://github.com/merliot/examples
+git clone https://github.com/merliot/examples.git
 ```
