@@ -52,35 +52,27 @@ examples/bmp180/
 └── README.md
 ```
 
-Building
+## Building
+```
+$ cd examples/bmp180
+$ ./build
+```
 
+## Running
+```
+$ cd examples/bmp180
+$ ~/go/bin/bmp180
+[00_16_3e_0d_c6_c3] Merle version: v0.0.49
+[00_16_3e_0d_c6_c3] Model: "bmp180", Name: "bumpy"
+[00_16_3e_0d_c6_c3] Received [SYSTEM]: {"Msg":"_CmdInit"}
+[00_16_3e_0d_c6_c3] Public HTTP server listening on port :80
+[00_16_3e_0d_c6_c3] Skipping public HTTPS server; port is zero
+[00_16_3e_0d_c6_c3] Private HTTP server listening on port :6000
+[00_16_3e_0d_c6_c3] Skipping tunnel to mother; missing host
+[00_16_3e_0d_c6_c3] Received [SYSTEM]: {"Msg":"_CmdRun"}
+[00_16_3e_0d_c6_c3] Would Broadcast: {"Msg":"Update","Temperature":75,"Pressure":101}
+```
 
-$ cd merle
+Open http://localhost on the Raspberry Pi to view the user interface.
 
-$ ./build examples/bmp180
-
-Running
-
-
-$ cd merle
-
-$ ~/go/bin/bmp180 -h
-
-Usage of /home/merle/go/bin/bmp180:
-
-  -TLS uint
-
-        TLS port
-
-  -prime
-
-        Run as Thing Prime
-
-  -rhost string
-
-        Remote host
-
-  -ruser string
-
-        Remote user (default "merle")
-
+Or, open http://<ip address> from another system using the Rapsberry Pi's <IP address>.
