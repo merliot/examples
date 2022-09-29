@@ -31,8 +31,8 @@ git clone https://github.com/merliot/examples.git
 
 Files for this example are located in examples/gps/ and examples/telit.
 ```
-examples/gps
-├── build
+examples/gps                  examples/telit/
+├── build                     └── telit.go
 ├── cmd
 │   └── gps
 │       └── main.go
@@ -40,9 +40,6 @@ examples/gps
 ├── gps.png
 ├── gps_ui.png
 └── README.md
-
-examples/telit/
-└── telit.go
 ```
 
 Thing Prime runs on a cloud VM.  I'm using a Linode VM to host Thing Prime.
