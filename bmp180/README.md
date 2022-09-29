@@ -63,14 +63,14 @@ examples/bmp180/
 
 ### Building
 ```
-$ cd examples/bmp180
-$ ./build
+cd examples/bmp180
+./build
 ```
 
 ### Running
 ```
-$ cd examples/bmp180
-$ ~/go/bin/bmp180
+cd examples/bmp180
+~/go/bin/bmp180
 [00_16_3e_0d_c6_c3] Merle version: v0.0.49
 [00_16_3e_0d_c6_c3] Model: "bmp180", Name: "bumpy"
 [00_16_3e_0d_c6_c3] Received [SYSTEM]: {"Msg":"_CmdInit"}
