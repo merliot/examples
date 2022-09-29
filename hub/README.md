@@ -2,5 +2,6 @@ This example Thing is a hub.  A hub is a bridge that provides an aggregated UI t
 all of the child user interfaces.  The hub does not forward packets between children; it
 strictly provides an aggregated view into all connected children.
 
-Consider these three Things.  One running the [GPS Locator](../../gps) example, one running the Relays
-example, and a third running the Temperature/Pressure example.
+Consider these three Things.  One running the [GPS Locator]([../../gps](https://github.com/merliot/examples/tree/main/gps))
+example, one running the [Relays](https://github.com/merliot/examples/tree/main/relays) example,
+and a third running the [Temperature/Pressure](https://github.com/merliot/examples/tree/main/bmp180) example.
