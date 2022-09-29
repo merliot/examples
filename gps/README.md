@@ -53,9 +53,15 @@ Checking setup...
 Go version 1.19.1
 Building /home/merle/go/bin/gps...
 ```
+The application binary is ~/go/bin/gps.
 
 ## Running
-The application binary is ~/go/bin/gps.  Run the application to initialize the hardware and start an HTTP server on port :80.
+### Running in Stand-alone Mode
+We can start the application and verify things are working before connecting to the Internet.
+
+We need a Wifi connection on the Raspberry Pi, or someway to interface with the Raspberry Pi.  Let's assume Wifi for this example.
+
+On the Raspberry Pi, run the application to initialize the hardware and start an HTTP server on port :80.
 ```
 $ ~/go/bin/gps
 [00_16_3e_0d_c6_c3] Merle version: v0.0.49
@@ -70,7 +76,7 @@ $ ~/go/bin/gps
 ```
 It'll take a bit (few seconds to a few minutes) to lock in the GPS location.  An Update message is broadcast when the location changes.
 
-Now browse to http://localhost to see the UI.
+Browse to Raspberry Pi's IP address on the Wifi network to see the UI.
 
 ### Running in Demo Mode
 Running in demo mode doesn't require the hardware setup.  Demo mode just cycles through a list of hard-coded lat/long locations.  All you need is a system running Go.  Start the application with the -demo option.  
@@ -93,3 +99,10 @@ $ ~/go/bin/gps -demo
 [00_16_3e_0d_c6_c3] Reply: {"Msg":"_ReplyState","Lat":57.75,"Long":12}
 ```
 Now browse to http://localhost to see the UI.  The location changes every few minutes.
+
+### Running on the Internet
+This requires two systems: the Raspberry Pi and a server on the Internet.  I'm using a VM hosted on [linode.com](https://linode.com) for the server.  The VM runs a copy of our example application and maintains state with the copy running on the Raspberry Pi.
+
+On the VM, build the application as previously done on the Raspberry Pi.  Run as before but add the -prime option:
+
+
