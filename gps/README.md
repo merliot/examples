@@ -21,9 +21,30 @@ in demo mode on any system with Go installed.  (See Running below).
 (North America) LTE module option, $125 for the [kit](https://sixfab.com/product/raspberry-pi-4g-lte-modem-kit/).
 It includes a SIM card for $2/month + data.
 
+### Sixfab Setup
+* Follow the Sixfab [instructions](https://docs.sixfab.com/) to install the Sixfab software on the Raspberry Pi.
+* Activate the Sixfab SIM
+
 ## Software Setup
+### Installation
+git clone https://github.com/merliot/examples.git
+
 Files for this example are located in examples/gps/ and examples/telit.
+```
+examples/gps
+├── build
+├── cmd
+│   └── gps
+│       └── main.go
+├── gps.go
+├── gps.png
+├── gps_ui.png
+└── README.md
+
+examples/telit/
+└── telit.go
+```
 
 Thing Prime runs on a cloud VM.  I'm using a Linode VM to host Thing Prime.
 
-Sixfab core software is installed on Raspberry Pi and SIM is activated.
+
