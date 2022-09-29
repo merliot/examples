@@ -103,11 +103,21 @@ Now browse to http://localhost to see the UI.  The location changes every few mi
 ### Running on the Internet
 This requires two systems: the Raspberry Pi and a server on the Internet.  I'm using a VM hosted on [linode.com](https://linode.com) for the server.  The VM runs a copy of our example application and maintains state with the copy running on the Raspberry Pi.
 
-On the VM, build the application as previously done on the Raspberry Pi.  Run as before but add the -prime option:
+#### Raspberry Pi
+On the Raspberry Pi, build and start the application, specifying VM IP address on Internet using -rhost option:
 ```
+$ cd examples/gps
+$ ./build
+$ ~/go/bin/gps -rhost [VM IP address]
+```
+
+#### Server VM on the Internet
+On the VM, build and start the application, specifying the -prime option:
+```
+$ cd examples/gps
+$ ./build
 $ ~/go/bin/gps -prime
 [prime] Merle version: v0.0.49
 [prime] Model: "gps", Name: "gypsy"
 [prime] Private HTTP server listening on port :6000
 ```
-
