@@ -70,7 +70,7 @@ Go version 1.19.1
 Building /home/merle/go/bin/bmp180...
 ```
 
-### Running
+## Running
 ```
 $ cd examples/bmp180
 $ ~/go/bin/bmp180
