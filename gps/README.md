@@ -121,3 +121,5 @@ $ ~/go/bin/gps -prime
 [prime] Model: "gps", Name: "gypsy"
 [prime] Private HTTP server listening on port :6000
 ```
+
+Now browse to http://[VM IP address] to see the UI.  The location changes every few minutes.
