@@ -65,6 +65,9 @@ examples/bmp180/
 ```
 cd examples/bmp180
 ./build
+Checking setup...
+Go version 1.19.1
+Building /home/merle/go/bin/bmp180...
 ```
 
 ### Running
