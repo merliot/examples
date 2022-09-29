@@ -70,8 +70,10 @@ $ ~/go/bin/gps
 ```
 It'll take a bit (few seconds to a few minutes) to lock in the GPS location.  An Update message is broadcast when the location changes.
 
+Now browse to http://localhost to see the UI.
+
 ### Running in Demo Mode
-Running in demo mode doesn't require the hardware setup.  Demo mode just cycles through a list of hard-coded lat/long locations.  All you need is a system running Go.
+Running in demo mode doesn't require the hardware setup.  Demo mode just cycles through a list of hard-coded lat/long locations.  All you need is a system running Go.  Start the application with the -demo option.  
 ```
 $ ~/go/bin/gps -demo
 [00_16_3e_0d_c6_c3] Merle version: v0.0.49
@@ -90,6 +92,4 @@ $ ~/go/bin/gps -demo
 [00_16_3e_0d_c6_c3] Received [ws:[::1]:39738]: {"Msg":"_GetState"}
 [00_16_3e_0d_c6_c3] Reply: {"Msg":"_ReplyState","Lat":57.75,"Long":12}
 ```
-
-
-Thing Prime runs on a cloud VM.  I'm using a Linode VM to host Thing Prime.
+Now browse to http://localhost to see the UI.  The location changes every few minutes.
