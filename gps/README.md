@@ -54,7 +54,7 @@ Go version 1.19.1
 Building /home/merle/go/bin/gps...
 ```
 
-### Running
+## Running
 The application binary is ~/go/bin/gps.  Run the application to initialize the hardware and start an HTTP server on port :80.
 ```
 $ ~/go/bin/gps
