@@ -7,7 +7,7 @@ the GPIO pins, in turn toggle the relays, and in turn toggle the lights.
 
 ![Relays](relays.png)
 
-## User Interface
+### User Interface
 
 ![UI](relays_ui.png)
 
@@ -27,29 +27,47 @@ Each relay on the relay hat is rated for 2A/24V current max, so keep the load wi
 $ git clone https://github.com/merliot/examples.git
 ```
 Files for this example are located in examples/relays
-
+```
 examples/relays/
-
+├── build
 ├── cmd
+│   └── relays
+│       └── main.go
+├── README.md
+├── relays.go
+├── relays.png
+└── relays_ui.png
+```
 
-│   └── relays
+### Building
+```
+$ cd examples/relays
+$ ./build
+Checking setup...
+Go version 1.19.1
+Building /home/merle/go/bin/relays...
+```
+The application binary is ~/go/bin/relays.
 
-│       └── main.go	
-
-└── relays.go
-
-Building
-
-
-$ cd merle
-
-$ ./build examples/relays
-
-Running
-
-
-$ cd merle
-
-$ ~/go/bin/relays
-
+### Running
+```
+$ ~/go/bin/relays 
+[00_16_3e_0d_c6_c3] Merle version: v0.0.49
+[00_16_3e_0d_c6_c3] Model: "relays", Name: "relaysforhope"
+[00_16_3e_0d_c6_c3] Not handled [SYSTEM]: {"Msg":"_CmdInit"}
+[00_16_3e_0d_c6_c3] Public HTTP server listening on port :80
+[00_16_3e_0d_c6_c3] Skipping public HTTPS server; port is zero
+[00_16_3e_0d_c6_c3] Private HTTP server listening on port :6000
+[00_16_3e_0d_c6_c3] Skipping tunnel to mother; missing host
+[00_16_3e_0d_c6_c3] Received [SYSTEM]: {"Msg":"_CmdRun"}
+[00_16_3e_0d_c6_c3] Websocket opened [ws:[::1]:33714/ws/00_16_3e_0d_c6_c3]
+[00_16_3e_0d_c6_c3] Received [ws:[::1]:33714]: {"Msg":"_GetIdentity"}
+[00_16_3e_0d_c6_c3] Reply: {"Msg":"_ReplyIdentity","Id":"00_16_3e_0d_c6_c3","Model":"relays","Name":"relays
+[00_16_3e_0d_c6_c3] Received [ws:[::1]:33714]: {"Msg":"_GetState"}
+[00_16_3e_0d_c6_c3] Reply: {"Msg":"_ReplyState","States":[false,false,false,false]}
+```
 Any relays previously left on will be turned off at startup.
+
+Browse to Raspberry Pi's IP address on the Wifi network to see the UI.  Click the checkboxes on the UI to toggle the relays.
+
+![UI](relays_ui.png)
