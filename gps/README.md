@@ -111,7 +111,7 @@ $ ./build
 $ ~/go/bin/gps -rhost [VM IP address]
 ```
 
-#### Server VM on the Internet
+#### VM on the Internet
 On the VM, build and start the application, specifying the -prime option:
 ```
 $ cd examples/gps
