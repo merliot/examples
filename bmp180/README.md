@@ -29,23 +29,23 @@ SDA	SDA (Pin 3)
 ### Enable I2C
 * Use the raspi-config tool to enable  I2C interface on Raspberry Pi
 ```
-sudo raspi-config
+$ sudo raspi-config
 ```
 * Install i2c-utils
 ```
-sudo apt update
-sudo apt install -y i2c-tools
+$ sudo apt update
+$ sudo apt install -y i2c-tools
 ```
 * Verify I2C connections.  There should be at least one address in use.  (if you see all "--" for all the addresses, something is wrong in finding the I2C device: check wiring).
 ```
-sudo i2cdetect -y 1
+$ sudo i2cdetect -y 1
 ```
 
 ## Software Setup
 
 #### Installation
 ```
-git clone https://github.com/merliot/examples.git
+$ git clone https://github.com/merliot/examples.git
 ```
 
 Files for this example are located in examples/bmp180:
@@ -63,8 +63,8 @@ examples/bmp180/
 
 ### Building
 ```
-cd examples/bmp180
-./build
+$ cd examples/bmp180
+$ ./build
 Checking setup...
 Go version 1.19.1
 Building /home/merle/go/bin/bmp180...
@@ -72,8 +72,8 @@ Building /home/merle/go/bin/bmp180...
 
 ### Running
 ```
-cd examples/bmp180
-~/go/bin/bmp180
+$ cd examples/bmp180
+$ ~/go/bin/bmp180
 [00_16_3e_0d_c6_c3] Merle version: v0.0.49
 [00_16_3e_0d_c6_c3] Model: "bmp180", Name: "bumpy"
 [00_16_3e_0d_c6_c3] Received [SYSTEM]: {"Msg":"_CmdInit"}
