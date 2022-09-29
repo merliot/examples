@@ -7,4 +7,5 @@ git clone https://github.com/merliot/examples.git
 ```
 
 ## Raspberry Pi Examples
-* [Temperature/Pressure using BMP180 sensor](https://github.com/merliot/examples/tree/main/bmp180)
+* [Temperature/Pressure](https://github.com/merliot/examples/tree/main/bmp180) using BMP180 sensor
+* [GPS Locator](https://github.com/merliot/examples/tree/main/gps) using Sixfab cellular modem w/ GPS
