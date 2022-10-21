@@ -13,8 +13,8 @@ import (
 )
 
 // Access point info
-const ssid = "Feldman Starlink"
-const pass = "itsasecret"
+const ssid = ""
+const pass = ""
 
 func init() {
 	// 2 sec delay otherwise some printlns are missed at startup in serial output
