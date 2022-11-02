@@ -183,8 +183,8 @@ const html = `
 	</body>
 </html>`
 
-func (r *Relays) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (r *Relays) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		HtmlTemplateText: html,
 	}
 }

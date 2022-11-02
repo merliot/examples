@@ -75,6 +75,6 @@ func (n *node) Subscribers() merle.Subscribers {
 	}
 }
 
-func (n *node) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{}
+func (n *node) Assets() merle.ThingAssets {
+	return merle.ThingAssets{}
 }

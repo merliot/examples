@@ -350,8 +350,8 @@ const html = `
 	</body>
 </html>`
 
-func (g *gps) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (g *gps) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		HtmlTemplateText: html,
 	}
 }

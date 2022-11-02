@@ -30,6 +30,6 @@ func (b *bridge) Subscribers() merle.Subscribers {
 	}
 }
 
-func (b *bridge) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{}
+func (b *bridge) Assets() merle.ThingAssets {
+	return merle.ThingAssets{}
 }

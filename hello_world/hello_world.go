@@ -15,8 +15,8 @@ func (h *hello) Subscribers() merle.Subscribers {
 	}
 }
 
-func (h *hello) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (h *hello) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		HtmlTemplateText: "Hello, world!\n",
 	}
 }

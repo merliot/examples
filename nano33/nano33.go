@@ -19,6 +19,6 @@ func (n *nano33) Subscribers() merle.Subscribers {
 	}
 }
 
-func (n *nano33) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{}
+func (n *nano33) Assets() merle.ThingAssets {
+	return merle.ThingAssets{}
 }

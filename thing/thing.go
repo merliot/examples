@@ -13,8 +13,8 @@ func (t *thing) Subscribers() merle.Subscribers {
 	}
 }
 
-func (t *thing) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (t *thing) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		HtmlTemplateText: "Hello!\n",
 	}
 }

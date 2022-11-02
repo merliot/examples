@@ -248,8 +248,8 @@ func (t *thermo) Subscribers() merle.Subscribers {
 	}
 }
 
-func (t *thermo) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (t *thermo) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		AssetsDir:    "../thermo/assets",
 		HtmlTemplate: "templates/thermo.html",
 	}

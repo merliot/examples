@@ -37,8 +37,8 @@ func (b *blink) Subscribers() merle.Subscribers {
 	}
 }
 
-func (b *blink) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{}
+func (b *blink) Assets() merle.ThingAssets {
+	return merle.ThingAssets{}
 }
 
 func main() {

@@ -74,8 +74,8 @@ func (h *hub) Subscribers() merle.Subscribers {
 	}
 }
 
-func (h *hub) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (h *hub) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		AssetsDir:    "examples/hub/assets",
 		HtmlTemplate: "templates/hub.html",
 	}

@@ -234,8 +234,8 @@ const html = `
 	</body>
 </html>`
 
-func (b *Bmp180) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (b *Bmp180) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		HtmlTemplateText: html,
 	}
 }

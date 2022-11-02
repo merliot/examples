@@ -82,8 +82,8 @@ const html = `
 	</body>
 </html>`
 
-func (b *blink) Assets() *merle.ThingAssets {
-	return &merle.ThingAssets{
+func (b *blink) Assets() merle.ThingAssets {
+	return merle.ThingAssets{
 		AssetsDir:        "examples/tutorial/assets",
 		HtmlTemplateText: html,
 	}
