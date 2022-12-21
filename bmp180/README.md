@@ -2,12 +2,12 @@
 
 This example uses a cheap ($10) BMP180 barometric pressure/temperature/altitude sensor and a Raspberry Pi  to display temperature and pressure on dial gauges.
 
-<img src="bmp180_sensor.png" width=100>
+<img src="doc/bmp180_sensor.png" width=100>
 
 ## User Interface
 The User Interface uses gauge.js javascript library.
 
-![UI](bmp180.png)
+![UI](doc/bmp180.png)
 
 ## Hardware Setup
 ### Parts List
