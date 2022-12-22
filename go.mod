@@ -28,3 +28,7 @@ require (
 	golang.org/x/text v0.3.6 // indirect
 	periph.io/x/periph v3.6.2+incompatible // indirect
 )
+
+replace github.com/merliot/merle => /home/merle/merle
+
+replace tinygo.org/x/drivers => /home/merle/tinygo-drivers

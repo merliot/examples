@@ -21,7 +21,7 @@ func init() {
 	time.Sleep(2 * time.Second)
 }
 
-func (n *nano33) connectAP(ssid, pass string) {
+func (n *nano33) ConnectAP(ssid, pass string) string {
 	// These are the default pins for the Arduino Nano33 IoT.
 	spi := machine.NINA_SPI
 
@@ -60,11 +60,17 @@ func (n *nano33) connectAP(ssid, pass string) {
 		println(err.Error())
 		time.Sleep(time.Second)
 	}
-	println(ip.String())
-}
+	println("IP:", ip.String())
 
-func (n *nano33) init(p *merle.Packet) {
-	n.connectAP(ssid, pass)
+	mac, err := adaptor.GetMACAddress()
+	for ; err != nil; mac, err = adaptor.GetMACAddress() {
+		println(err.Error())
+		time.Sleep(time.Second)
+	}
+
+	println("MAC:", mac.String())
+
+	return mac.String()
 }
 
 func (n *nano33) run(p *merle.Packet) {

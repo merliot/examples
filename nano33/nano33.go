@@ -4,17 +4,18 @@ import "github.com/merliot/merle"
 
 //tinyjson:json
 type nano33 struct {
-	Msg   string
-	TempC int32
+	Msg     string
+	TempC   int32
+	macAddr string
 }
 
-func NewNano33() merle.Thinger {
+func NewNano33() *nano33 {
 	return &nano33{Msg: merle.ReplyState}
 }
 
 func (n *nano33) Subscribers() merle.Subscribers {
 	return merle.Subscribers{
-		merle.CmdInit: n.init,
+		merle.CmdInit: merle.NoInit,
 		merle.CmdRun:  n.run,
 	}
 }
