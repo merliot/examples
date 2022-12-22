@@ -3,6 +3,7 @@
 package main
 
 import (
+	"embed"
 	"log"
 	"time"
 
@@ -51,41 +52,12 @@ func (b *blink) Subscribers() merle.Subscribers {
 	}
 }
 
-const html = `
-<!DOCTYPE html>
-<html lang="en">
-	<body>
-		<img id="LED" style="width: 400px">
-
-		<script>
-			image = document.getElementById("LED")
-
-			conn = new WebSocket("{{.WebSocket}}")
-
-			conn.onopen = function(evt) {
-				conn.send(JSON.stringify({Msg: "_GetState"}))
-			}
-
-			conn.onmessage = function(evt) {
-				msg = JSON.parse(evt.data)
-				console.log('blink', msg)
-
-				switch(msg.Msg) {
-				case "_ReplyState":
-				case "Update":
-					image.src = "/{{.AssetsDir}}/images/led-" +
-						msg.State + ".png"
-					break
-				}
-			}
-		</script>
-	</body>
-</html>`
+//go:embed index.html images
+var fs embed.FS
 
 func (b *blink) Assets() merle.ThingAssets {
 	return merle.ThingAssets{
-		AssetsDir:        "examples/tutorial/assets",
-		HtmlTemplateText: html,
+		FS: fs,
 	}
 }
 
