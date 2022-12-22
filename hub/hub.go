@@ -1,6 +1,7 @@
 package hub
 
 import (
+	"embed"
 	"sync"
 
 	"github.com/merliot/merle"
@@ -74,9 +75,11 @@ func (h *hub) Subscribers() merle.Subscribers {
 	}
 }
 
+//go:embed index.html js css images
+var fs embed.FS
+
 func (h *hub) Assets() merle.ThingAssets {
 	return merle.ThingAssets{
-		AssetsDir:    "examples/hub/assets",
-		HtmlTemplate: "templates/hub.html",
+		FS: fs,
 	}
 }

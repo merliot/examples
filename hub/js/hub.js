@@ -1,8 +1,3 @@
-// Copyright 2021-2022 Scott Feldman (sfeldma@gmail.com). All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file.
-
-var hubId
 var lastImg
 var shown = false
 
@@ -28,7 +23,7 @@ function iconName(child) {
 	if (child.Online) {
 		status = "online"
 	}
-	return "/" + hubId + "/assets/images/" + status + ".jpg"
+	return "images/" + status + ".jpg"
 }
 
 function newIcon(child) {
@@ -88,9 +83,7 @@ function update(child) {
 	}
 }
 
-function Run(ws, id) {
-
-	hubId = id
+function Run(ws) {
 
 	var conn
 

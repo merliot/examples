@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 
 	"github.com/merliot/merle"
@@ -15,7 +16,9 @@ func main() {
 
 	thing.Cfg.PortPublic = 80
 	thing.Cfg.PortPrivate = 6000
-	thing.Cfg.PortPublicTLS = 443
+
+	flag.UintVar(&thing.Cfg.PortPublicTLS, "TLS", 0, "TLS port")
+	flag.Parse()
 
 	log.Fatalln(thing.Run())
 }
