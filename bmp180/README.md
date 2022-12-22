@@ -91,4 +91,4 @@ Or, open http://[ip address] from another system using the Rapsberry Pi's [IP ad
 
 In this example, the Raspberry Pi address is 192.168.1.130:
   
-![UI](bmp180.png)
+![UI](doc/bmp180.png)
