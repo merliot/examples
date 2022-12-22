@@ -5,11 +5,11 @@ independently control 4 lights.  Each relay in the 4-relay hat is tied to a GPIO
 pin on the Raspberry Pi.  We'll use the [gobot.io](https://gobot.io) library to toggle
 the GPIO pins, in turn toggle the relays, and in turn toggle the lights.
 
-![Relays](relays.png)
+![Relays](doc/relays.png)
 
 ### User Interface
 
-![UI](relays_ui.png)
+![UI](doc/relays_ui.png)
 
 ## Hardware Setup
 ### Parts List
@@ -33,10 +33,12 @@ examples/relays/
 ├── cmd
 │   └── relays
 │       └── main.go
+├── doc
+│   ├── relays.png
+│   └── relays_ui.png
+├── index.html
 ├── README.md
-├── relays.go
-├── relays.png
-└── relays_ui.png
+└── relays.go
 ```
 
 ### Building
@@ -70,4 +72,4 @@ Any relays previously left on will be turned off at startup.
 
 Browse to Raspberry Pi's IP address on the Wifi network to see the UI.  Click the checkboxes on the UI to toggle the relays.
 
-![UI](relays_ui.png)
+![UI](doc/relays_ui.png)
