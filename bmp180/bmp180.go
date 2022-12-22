@@ -92,7 +92,7 @@ func (b *Bmp180) Subscribers() merle.Subscribers {
 	}
 }
 
-//go:embed index.html bmp180.go cmd
+//go:embed index.html
 var fs embed.FS
 
 func (b *Bmp180) Assets() merle.ThingAssets {
