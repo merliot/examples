@@ -1,6 +1,7 @@
 package thermo
 
 import (
+	"embed"
 	"sync"
 
 	"github.com/merliot/merle"
@@ -248,9 +249,11 @@ func (t *thermo) Subscribers() merle.Subscribers {
 	}
 }
 
+//go:embed index.html thermo.js thermo.css
+var fs embed.FS
+
 func (t *thermo) Assets() merle.ThingAssets {
 	return merle.ThingAssets{
-		AssetsDir:    "../thermo/assets",
-		HtmlTemplate: "templates/thermo.html",
+		FS: fs,
 	}
 }
