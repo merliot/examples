@@ -52,12 +52,14 @@ Files for this example are located in examples/bmp180:
 ```
 examples/bmp180/
 ├── bmp180.go
-├── bmp180.png
-├── bmp180_sensor.png
 ├── build
 ├── cmd
 │   └── bmp180
 │       └── main.go
+├── doc
+│   ├── bmp180.png
+│   └── bmp180_sensor.png
+├── index.html
 └── README.md
 ```
 

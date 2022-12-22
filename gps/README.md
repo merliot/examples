@@ -3,13 +3,13 @@ This example Thing is a GPS locator running on a Raspberry Pi using a Sixfab
 cellular modem to connect to the Internet.  The Sixfab cellular modem also
 provides the GPS coordinates.
 
-![Network](gps.png)
+![Network](doc/gps.png)
 
 ## User Interface
 Thing's user interface shows a map view with a pin at Thing's current location.
 The location is checked and updated every minute.
 
-![UI](gps_ui.png)
+![UI](doc/gps_ui.png)
 
 ## Hardware Setup
 Parts list below.  If you don't have the hardware, don't worrry, you can run
