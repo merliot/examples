@@ -1,6 +1,7 @@
 package main
 
 import (
+	"embed"
 	"log"
 
 	"github.com/merliot/merle"
@@ -15,9 +16,12 @@ func (h *hello) Subscribers() merle.Subscribers {
 	}
 }
 
+//go:embed index.html
+var fs embed.FS
+
 func (h *hello) Assets() merle.ThingAssets {
 	return merle.ThingAssets{
-		HtmlTemplateText: "Hello, world!\n",
+		FS: fs,
 	}
 }
 
