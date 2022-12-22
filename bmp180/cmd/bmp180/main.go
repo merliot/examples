@@ -4,8 +4,8 @@ import (
 	"flag"
 	"log"
 
-	"github.com/merliot/merle"
 	"github.com/merliot/examples/bmp180"
+	"github.com/merliot/merle"
 )
 
 func main() {
